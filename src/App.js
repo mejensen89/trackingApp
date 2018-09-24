@@ -51,7 +51,9 @@ goReview() {
           </nav>
         </aside>
         <main>  
-         <this.state.currentView />
+          { this.state.currentView == 'Welcome' &&( <Welcome /> )}
+          { this.state.currentView == 'Review' && ( <Review />  )}
+          { this.state.currentView == 'Tracker' && ( <Tracker /> )}
         </main>
       </div>
     );
