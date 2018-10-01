@@ -36,6 +36,11 @@ goReview() {
   console.log(this.state.currentView);
 }
 
+goHome(){
+  this.setState({currentView: 'Welcome'});
+  console.log(this.state.currentView);
+}
+
 
 
   render() {
@@ -45,6 +50,7 @@ goReview() {
         <aside>
           <nav>
             <ul>
+              <li onClick={()=>this.goHome()}> Home </li>
               <li onClick={()=>this.goTrack()}> Tracker </li>
               <li onClick={()=>this.goReview()}> Review </li> 
             </ul>
